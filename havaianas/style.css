@@ -1,0 +1,123 @@
+/* fonts.scss */
+@font-face {
+    font-family: 'akkurat-light';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local('lineto akkurat prolight'),
+         url('fonts/lineto-akkurat-pro-light.woff2') format(woff2),
+         url('fonts/lineto-akkurat-pro-light.woff') format(woff);
+}
+
+/* main.scss */
+:root {
+    --spacing-reset: 0;
+    --spacing-default: 1rem;
+
+    --color-black: hsl(0 0% 0%);
+    --color-silver: hsl(0 0% 70%);
+    --color-gray: hsl(0 0% 50%);
+
+    --havaianas-teal: #50a9be;
+    --havaianas-green: #c0cf59;
+    --havaianas-yellow: #f7d04e;
+
+    --font-size-heading: 2.8rem;
+    --font-size-content: 1.6rem;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: arial, sans-serif;
+    font-size: 62.5%;
+    color: var(--color-black);
+}
+
+body {
+    margin: var(--spacing-reset);
+    font-size: 1.6rem;
+}
+
+/* collection.scss */
+.collection {
+    padding: 3rem 1rem;
+}
+
+.collection--havaianas {
+    background-color: var(--havaianas-yellow);
+    background-image: linear-gradient(var(--havaianas-teal), var(--havaianas-green), var(--havaianas-yellow));
+}
+
+
+/* cms-page-styles.scss */
+.cms-region {
+    padding: var(--spacing-default);
+    text-align: center;
+}
+
+.cms-region + .cms-region {
+    margin-top: var(--spacing-default);
+}
+
+.cms-content h1 {
+    margin: var(--spacing-reset);
+    font-size: var(--font-size-heading);
+}
+
+.cms-content p {
+    font-family: 'akkurat-light', sans-serif;
+    font-size: var(--font-size-content);
+}
+
+.cms-content img {
+    /* width: 50vw; */
+    /* height: auto; */
+}
+
+.cms-cta a {
+    font-weight: bold;
+    font-size: var(--font-size-content);
+    text-decoration-color: currentColor;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.cms-cta a:hover {
+    text-decoration: none;
+}
+
+.cms-media {
+    --spacing-default: 0;
+}
+
+
+/* products.scss */
+.products {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem var(--spacing-default);
+}
+
+.product-image-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-item-name {
+    font-size: 1.6rem;
+}
+
+.temp-promo {
+    display: block;
+}
+
+.util-hidden {
+    display: none;
+}
