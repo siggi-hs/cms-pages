@@ -1,4 +1,9 @@
-/* fonts.scss */
+
+/*
+    32em = 512px
+    64em = 1024px
+*/
+
 @font-face {
     font-family: 'akkurat-light';
     font-style: normal;
@@ -9,10 +14,12 @@
          url('fonts/lineto-akkurat-pro-light.woff') format(woff);
 }
 
-/* main.scss */
 :root {
     --spacing-reset: 0;
-    --spacing-default: 1rem;
+    --spacing-default: 1em;
+
+    --fill-width: 100vw;
+    --fill-height: 100vh;
 
     --color-black: hsl(0 0% 0%);
     --color-silver: hsl(0 0% 70%);
@@ -22,8 +29,15 @@
     --havaianas-green: #c0cf59;
     --havaianas-yellow: #f7d04e;
 
+    --font-size-master: 62.5%;
+    --font-size-base: 1.6rem;
     --font-size-heading: 2.8rem;
+    --font-size-heading-primary: 3.5rem;
+    --font-size-heading-secondary: 2.5rem;
+    --font-size-heading-tertiary: 1.8rem;
     --font-size-content: 1.6rem;
+
+    --icons-size-share: 5.0rem;
 }
 
 *, *:before, *:after {
@@ -32,18 +46,17 @@
 
 html {
     font-family: arial, sans-serif;
-    font-size: 62.5%;
+    font-size: var(--font-size-master);
     color: var(--color-black);
 }
 
 body {
     margin: var(--spacing-reset);
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
 }
 
-/* collection.scss */
 .collection {
-    padding: 3rem 1rem;
+    padding: 3em 1em;
 }
 
 .collection--havaianas {
@@ -51,10 +64,8 @@ body {
     background-image: linear-gradient(var(--havaianas-teal), var(--havaianas-green), var(--havaianas-yellow));
 }
 
-
-/* cms-page-styles.scss */
 .cms-region {
-    padding: var(--spacing-default);
+    padding: calc( var(--spacing-default) / 2 );
     text-align: center;
 }
 
@@ -62,9 +73,9 @@ body {
     margin-top: var(--spacing-default);
 }
 
-.cms-content h1 {
-    margin: var(--spacing-reset);
-    font-size: var(--font-size-heading);
+.cms-content {
+    max-width: 48em;
+    margin: 0 auto;
 }
 
 .cms-content p {
@@ -72,17 +83,50 @@ body {
     font-size: var(--font-size-content);
 }
 
-.cms-content img {
-    /* width: 50vw; */
-    /* height: auto; */
+@media screen and (min-width: 32em) {
+    .cms-content p {
+        --font-size-content: 2.0rem;
+    }
+}
+
+.cms-content a {
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+.cms-content a:hover {
+    text-decoration: none;
+}
+
+.cms-content h1,
+.cms-content h2,
+.cms-content h3 {
+    margin: var(--spacing-reset);
+    text-transform: uppercase;    
+}
+
+.cms-content h1 {
+    font-size: var(--font-size-heading-primary);
+}
+
+.cms-content h1 small {
+    display: block;
+    font-size: var(--font-size-heading-secondary);
+}
+
+.cms-content h2 {
+    font-size: var(--font-size-heading-secondary);
+}
+
+.cms-content h3 {
+    font-size: var(--font-size-heading-tertiary);
 }
 
 .cms-cta a {
+    color: var(--color-black);
     font-weight: bold;
     font-size: var(--font-size-content);
-    text-decoration-color: currentColor;
     text-transform: uppercase;
-    color: var(--color-black);
 }
 
 .cms-cta a:hover {
@@ -91,10 +135,31 @@ body {
 
 .cms-media {
     --spacing-default: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--color-black);
 }
 
+@media (min-width: 64em) and (pointer: fine) {
+    .cms-media {
+        height: var(--fill-height);
+    }
+}
 
-/* products.scss */
+.cms-media-video  {
+    width: var(--fill-width);
+}
+
+@media (min-width: 64em) and (pointer: fine) {
+    .cms-media-video {
+        height: var(--fill-height);
+        object-fit: cover;
+    }
+}
+
 .products {
     margin: 0;
     padding: 0;
@@ -114,10 +179,51 @@ body {
     font-size: 1.6rem;
 }
 
-.temp-promo {
-    display: block;
-}
-
 .util-hidden {
     display: none;
+}
+
+.cms-share {
+    display: grid;
+    grid-gap: 2.8rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cms-share-heading {
+    margin: var(--spacing-reset);
+    font-size: var(--font-size-heading-tertiary);
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:32em) {
+    .cms-share-heading {
+        --font-size-heading-tertiary: 2.4rem;
+    }
+}
+
+.cms-share-graphic {
+    width: var(--icons-size-share);
+    height: var(--icons-size-share);
+    vertical-align: middle;
+    transition: transform ease-out 70ms;
+}
+
+.cms-share-graphic:hover,
+.cms-share-graphic:focus {
+    transform: scale(1.15);
+}
+
+.cms-share-graphic:active {
+    transform: scale(1);
+}
+
+footer {
+    height: 200px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: white;
+    background-color: #292e37;
 }
