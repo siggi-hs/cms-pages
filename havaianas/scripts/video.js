@@ -7,10 +7,22 @@ mediaContainer.forEach((c, i) => {
 });
 
 mediaVideoItem.forEach((v) => {
-    v.autoplay = false;
+
     v.controls = true;
-    v.muted = false;
     v.loop = true;
     v.preload = 'metadata';
     v.setAttribute('playsinline', 'true');
+
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // mobile!
+        console.log('mobile');
+        v.autoplay = false;
+        v.muted = false;
+    } else {
+        console.log('desktop');
+        v.autoplay = true;
+        v.muted = true;
+    }
+
 });
+

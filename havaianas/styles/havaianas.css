@@ -1,0 +1,4 @@
+.cms-havaianas .collection {
+    background-color: var(--havaianas-yellow);
+    background-image: linear-gradient(var(--havaianas-teal), var(--havaianas-green), var(--havaianas-yellow));
+}

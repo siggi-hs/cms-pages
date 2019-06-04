@@ -37,7 +37,7 @@
     --font-size-heading-tertiary: 1.8rem;
     --font-size-content: 1.6rem;
 
-    --icons-size-share: 5.0rem;
+    --icons-size-share: 3em;
 }
 
 *, *:before, *:after {
@@ -59,9 +59,8 @@ body {
     padding: 3em 1em;
 }
 
-.collection--havaianas {
-    background-color: var(--havaianas-yellow);
-    background-image: linear-gradient(var(--havaianas-teal), var(--havaianas-green), var(--havaianas-yellow));
+.collection * + * {
+    margin: var(--font-size-base) var(--spacing-reset);
 }
 
 .cms-region {
@@ -69,13 +68,18 @@ body {
     text-align: center;
 }
 
-.cms-region + .cms-region {
-    margin-top: var(--spacing-default);
-}
-
 .cms-content {
     max-width: 48em;
     margin: 0 auto;
+}
+
+.cms-content > * {
+    margin-top: var(--spacing-reset);
+    margin-bottom: var(--font-size-base);
+}
+
+.cms-content * + * {
+    margin: var(--font-size-base) var(--spacing-reset);
 }
 
 .cms-content p {
@@ -101,8 +105,7 @@ body {
 .cms-content h1,
 .cms-content h2,
 .cms-content h3 {
-    margin: var(--spacing-reset);
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 .cms-content h1 {
@@ -181,6 +184,17 @@ body {
 
 .util-hidden {
     display: none;
+}
+
+.util-skiplink,
+.ha {
+    position: absolute;
+    left: -9999em;
+}
+
+.util-skiplink-focus {
+    left: 0;
+    z-index: 1;
 }
 
 .cms-share {
