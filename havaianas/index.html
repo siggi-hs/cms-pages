@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="scripts/video.js" async></script>
+    
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/havaianas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+    <link rel="stylesheet" href="styles/tiny-slider.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+    <script src="scripts/video.js" async></script>
+    <script type="module">    
+        var slider = tns({
+            container: '.my-slider',
+            slideBy: 'page',
+            autoplay: false,
+            autoplayButtonOutput: false,
+            controls: false,
+            controlsText: ["<",">"]
+        });
+    </script>
     <title>Happy Socks &times; Havaianas | Happy Socks collab</title>
 </head>
 
@@ -18,7 +33,7 @@
     </div>
 
     <aside class="cms-region cms-media" data-video-container>
-        <video data-video-item intrinsicsize="1920 x 1080" class="cms-media-video" crossorigin="anonymous" poster="images/posterframe@1x.jpg" oncontextmenu="return false;">
+        <video data-video-item intrinsicsize="1920 x 1080" class="cms-media-video" poster="images/posterframe@1x.jpg" oncontextmenu="return false;">
             <source src="media/demo.mp4" type="video/mp4"/>
             <p>Your browser doesn't support HTML5 video. Here is a <a href="media/demo.mp4">link to the video</a> instead.</p>
         </video>
@@ -65,8 +80,30 @@
 
         <hr class="util-hidden">
 
-        <section class="cms-region">
-            image gallery
+        <section class="cms-region cms-slider">
+            <div class="my-slider">
+                
+                    <picture>
+                        <!-- Tablet and up -->
+                        <source srcset="images/lifestyle/1_01_desktop.jpg" media="(min-width: 512px)">
+                        <!-- Mobile and up to tablet -->
+                        <img srcset="images/lifestyle/1_01_mobile.jpg" alt="Animal dot set" class="slider-fallback">
+                    </picture>
+
+                    <picture>
+                        <!-- Tablet and up -->
+                        <source srcset="images/lifestyle/2_01_desktop.jpg" media="(min-width: 512px)">
+                        <!-- Mobile and up to tablet -->
+                        <img srcset="images/lifestyle/2_01_mobile.jpg" alt="Nature set" class="slider-fallback">
+                    </picture>
+
+                    <picture>
+                        <!-- Tablet and up -->
+                        <source srcset="images/lifestyle/3_01_desktop.jpg" media="(min-width: 512px)">
+                        <!-- Mobile and up to tablet -->
+                        <img srcset="images/lifestyle/3_01_mobile.jpg" alt="Sport set" class="slider-fallback">
+                    </picture>
+            </div>
         </section>
 
         <hr class="util-hidden">

@@ -218,6 +218,21 @@ body {
     transform: scale(1);
 }
 
+.cms-slider {
+    padding: var(--spacing-reset);
+}
+
+@media screen and (min-width: 32em) {
+    .cms-slider {
+        height: 100vh;
+    }   
+}
+
+.slider-fallback {
+    width: 100vw;
+    vertical-align: middle;
+}
+
 .util-hidden {
     display: none;
 }
