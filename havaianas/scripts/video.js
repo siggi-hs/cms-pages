@@ -14,12 +14,12 @@ mediaVideoItem.forEach((v) => {
         v.autoplay = false;
         v.muted = false;
         v.loop = false;
+        v.onended = function(e) {
+            this.currentTime = 0;
+        };
     } else {
-        v.autoplay = false;
+        v.autoplay = true;
         v.muted = true;
-        v.loop = false;
+        v.loop = true;
     }
-    v.onended = function(e) {
-        this.currentTime = 0;
-    };
 });
