@@ -8,14 +8,17 @@
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/havaianas.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
     <link rel="stylesheet" href="styles/tiny-slider.css">
 
+    <link rel="preconnect" href="//hs-affiliate-media.s3.amazonaws.com" crossorigin>
+    <link rel="preconnect" href="//cdnjs.cloudflare.com" crossorigin>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
-    <script src="scripts/video.js" async></script>
     <script type="module">    
         var slider = tns({
-            container: '.my-slider',
+            container: '.lifestyle-slider',
             slideBy: 'page',
             autoplay: true,
             autoplayButtonOutput: false,
@@ -23,6 +26,7 @@
             controlsText: ["<",">"]
         });
     </script>
+    <script src="scripts/video.js" async></script>
     <title>Happy Socks &times; Havaianas | Happy Socks collab</title>
 </head>
 
@@ -33,21 +37,17 @@
     </div>
 
     <aside class="cms-region cms-media" data-video-container>
-        <video data-video-item intrinsicsize="1920 x 1080" class="cms-media-video" poster="images/posterframe@1x.jpg" oncontextmenu="return false;">
-            <source src="media/demo.mp4" type="video/mp4"/>
-            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/demo.mp4">link to the video</a> instead.</p>
+        <video data-video-item intrinsicsize="960 x 540" class="cms-media-video" poster="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/posterframe@1x.jpg" oncontextmenu="return false;">
+            <source src="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/video/demo-960.mp4" type="video/mp4"/>
+            <p>Your browser doesn't support HTML5 video. Here is a <a href="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/video/demo.mp4">link to the video</a> instead.</p>
         </video>
     </aside>
     <main id="content">
         <section class="collection">
             <div class="cms-region cms-content">
-
                 <h1>
-                    <img width="160" height="130" src="images/logo.svg" alt="Happy Socks and Havaianas">
+                    <img width="160" height="130" src="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/logo.svg" alt="Happy Socks and Havaianas">
                 </h1>
-
-                <h1><small>Free shipping on</small> Lorem ipsum</h1>
-                
                 <p>Lorem <a href="#">ipsum dolor sit</a> amet, <strong>consectetur adipiscing</strong> elit, <em>sed do eiusmod</em> tempor incididunt ut labore et dolore magna
                 aliqua. <strong><em>Ut enim ad minim veniam</em></strong>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <h3>#happinesseverywhere</h3>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="cms-region">
-                <img src="images/toco.png" alt="Toco parrot illustration">
+                <img src="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/toco.png" alt="Toco parrot illustration">
             </div>
 
             <hr class="util-hidden">
@@ -312,41 +312,36 @@
 
 
             </div>
-
             <div class="cms-region cms-cta">
                 <h1>heading</h1>
                 <p>
                     <a href="#">Lorem ipsum</a>
                 </p>
             </div>
-
         </section>
 
         <hr class="util-hidden">
 
         <section class="cms-region cms-slider">
-            <div class="my-slider">
-                
-                    <picture>
-                        <!-- Tablet and up -->
-                        <source srcset="images/lifestyle/1_01_desktop.jpg" media="(min-width: 512px)">
-                        <!-- Mobile and up to tablet -->
-                        <img srcset="images/lifestyle/1_01_mobile.jpg" alt="Animal dot set" class="slider-fallback">
-                    </picture>
-
-                    <picture>
-                        <!-- Tablet and up -->
-                        <source srcset="images/lifestyle/2_01_desktop.jpg" media="(min-width: 512px)">
-                        <!-- Mobile and up to tablet -->
-                        <img srcset="images/lifestyle/2_01_mobile.jpg" alt="Nature set" class="slider-fallback">
-                    </picture>
-
-                    <picture>
-                        <!-- Tablet and up -->
-                        <source srcset="images/lifestyle/3_01_desktop.jpg" media="(min-width: 512px)">
-                        <!-- Mobile and up to tablet -->
-                        <img srcset="images/lifestyle/3_01_mobile.jpg" alt="Sport set" class="slider-fallback">
-                    </picture>
+            <div class="lifestyle-slider">
+                <picture>
+                    <!-- Tablet and up -->
+                    <source srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/1_01_desktop.jpg" media="(min-width: 512px)">
+                    <!-- Mobile and up to tablet -->
+                    <img srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/1_01_mobile.jpg" alt="Animal dot set" class="slider-fallback">
+                </picture>
+                <picture>
+                    <!-- Tablet and up -->
+                    <source srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/2_01_desktop.jpg" media="(min-width: 512px)">
+                    <!-- Mobile and up to tablet -->
+                    <img srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/2_01_mobile.jpg" alt="Nature set" class="slider-fallback">
+                </picture>
+                <picture>
+                    <!-- Tablet and up -->
+                    <source srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/3_01_desktop.jpg" media="(min-width: 512px)">
+                    <!-- Mobile and up to tablet -->
+                    <img srcset="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/lifestyle/3_01_mobile.jpg" alt="Sport set" class="slider-fallback">
+                </picture>
             </div>
         </section>
 
@@ -354,7 +349,7 @@
 
         <section class="collection">
             <div class="cms-region">
-                    <img class="cms-logox" width="160" height="130" src="images/logo.svg" alt="Happy Socks and Havaianas">
+                    <img class="cms-logox" width="160" height="130" src="https://hs-affiliate-media.s3.amazonaws.com/web-assets/campaigns/2019/cms-page/images/logo.svg" alt="Happy Socks and Havaianas">
             </div>
             <div class="cms-region">
                 <h3 class="cms-share-heading">#happysocksxhavaianas</h3>
@@ -410,5 +405,4 @@
     </div>
 
 </body>
-
 </html>
