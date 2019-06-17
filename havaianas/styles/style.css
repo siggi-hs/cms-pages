@@ -208,6 +208,21 @@ body {
     font-size: 1.6rem;
 }
 
+.util-hidden {
+    display: none;
+}
+
+.util-skiplink,
+.ha {
+    position: absolute;
+    left: -9999em;
+}
+
+.util-skiplink-focus {
+    left: 0;
+    z-index: 1;
+}
+
 .cms-share {
     display: grid;
     grid-gap: 2.8rem;
