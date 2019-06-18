@@ -1,4 +1,10 @@
-.cms-havaianas .collection {
+:root {
+    --havaianas-teal: #50a9be;
+    --havaianas-green: #c0cf59;
+    --havaianas-yellow: #f7d04e;
+}
+
+.cms-havaianas .stack {
     background-color: var(--havaianas-yellow);
     background-image: linear-gradient(var(--havaianas-teal), var(--havaianas-green), var(--havaianas-yellow));
 }

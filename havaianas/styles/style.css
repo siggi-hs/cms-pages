@@ -17,18 +17,11 @@
 :root {
     --spacing-reset: 0;
     --spacing-default: 1em;
-
     --fill-width: 100vw;
     --fill-height: 100vh;
-
     --color-black: hsl(0 0% 0%);
     --color-silver: hsl(0 0% 70%);
     --color-gray: hsl(0 0% 50%);
-
-    --havaianas-teal: #50a9be;
-    --havaianas-green: #c0cf59;
-    --havaianas-yellow: #f7d04e;
-
     --font-size-master: 62.5%;
     --font-size-base: 1.6rem;
     --font-size-heading: 2.8rem;
@@ -36,7 +29,6 @@
     --font-size-heading-secondary: 2.5rem;
     --font-size-heading-tertiary: 1.8rem;
     --font-size-content: 1.6rem;
-
     --icons-size-share: 3em;
 }
 
@@ -55,11 +47,11 @@ body {
     font-size: var(--font-size-base);
 }
 
-.collection {
+.stack {
     padding: 3em 1em;
 }
 
-.collection *:not(.cms-exclude *) + *:not(.cms-exclude *) {
+.stack *:not(.cms-exclude *) + *:not(.cms-exclude *) {
     margin: var(--font-size-base) var(--spacing-reset);
 }
 
@@ -169,14 +161,14 @@ body {
     list-style: none;
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4em 2em;
+    grid-gap: 4em;
 }
 
 @media (min-width: 64em) {
     .products {
         margin: 1em auto;
-        max-width: 80em;
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: 6em;
     }
 }
 
