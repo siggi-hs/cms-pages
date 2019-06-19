@@ -2,18 +2,11 @@
     position: relative;
 }
 
-@media screen and (min-width: 32em) {
-    .tns-outer {
-    }
-}
-
 .tns-controls {
-
     position: absolute;
     width: 100%;
     top: 0;
     bottom: 0;
-
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -21,7 +14,6 @@
 }
 
 .tns-nav {
-
     position: absolute;
     z-index: 2;
     bottom: 0;
@@ -37,18 +29,6 @@
 
 .tns-item picture * {
     width: 100vw;
-}
-
-.tns-item img {
-    width: 100vw;
-    vertical-align: middle;
-    object-fit: cover;
-}
-
-@media screen and (min-width: 32em) {
-    .tns-item img {
-        height: 100vh;
-    }
 }
 
 .tns-nav > [aria-controls] {
